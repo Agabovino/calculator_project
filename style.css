@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: #6c3033 ;
+    color: #e1e2e7;
+}
+
+.main-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #813238 ;
+
+    width: 300px;
+    height: 500px;
+    padding: 12px;
+
+    border-radius: 6px;
+}
+
+/*UPPER SECTION*/
+
+.display-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e2e7;
+
+    margin: 12px;
+    border-radius: 6px;
+}
+
+.display{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    margin: 12px;
+    padding: 12px;
+    width: 80%;
+    height: 50px;
+    box-shadow: inset 1px -1px 12px 6px lightgray;
+}
+
+.inner-display{
+
+    width: 100%;
+    height: 50px;
+   
+    background-color: #a6b1b5;
+}
+
+.calculator-name{
+   
+    color: #d3d3d8 ;
+    margin: 12px;
+
+    text-align: center;
+
+    font-style: italic;
+}
+
+
+/*MIDDLE SECTION*/
+
+.power{
+    background-color: #a73330 ;
+}
+
+.cleaner-and-powerOn{
+    background-color: #a73330 ;
+}
+
+.memory{
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.lower-nav-keys{
+
+    background-color: blue solid 2px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.upper-nav-keys{
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    margin: 12px;
+
+}
+
+/*LOWER AREA*/
+
+.lower-keys{
+    display: flex;
+    margin: 12px;
+
+}
+
+.left-keys{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right-keys{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.numberKeys{
+    padding: 12px;
+    border-radius: 8px;
+    margin: 6px;
+}
