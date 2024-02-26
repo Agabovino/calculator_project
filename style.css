@@ -5,24 +5,30 @@ body{
 }
 
 button{
-    background-color: #6c3033 ;
+    background-color: #412425 ;
     color: #e1e2e7;
+
+    box-shadow: 2px 4px 4px 1px #4d272a;
 }
 
 .main-container{
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: #813238 ;
 
-    width: 300px;
+    width: 320px;
     height: 500px;
-    padding: 12px;
+
+    margin: 24px;
 
     border-radius: 6px;
+
+
+    box-shadow: 0 0px 0px 12px #792f35;
 }
 
 /*UPPER SECTION*/
@@ -62,7 +68,7 @@ button{
 
 .calculator-name{
    
-    color: #d3d3d8 ;
+    color: rgb(209, 203, 203) ;
     margin: 12px;
 
     text-align: center;
@@ -73,24 +79,20 @@ button{
 
 /*MIDDLE SECTION*/
 
-.power{
-    background-color: #a73330 ;
-}
+.nav-keys{
 
-.cleaner-and-powerOn{
-    background-color: #a73330 ;
-}
-
-.memory{
-    padding: 6px;
-    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .lower-nav-keys{
 
-    background-color: blue solid 2px;
+    width: 100%;
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .upper-nav-keys{
@@ -103,11 +105,32 @@ button{
 
 }
 
+.power{
+    background-color: #e33935;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.cleaner-and-powerOn{
+
+    background-color: #e33935;
+    border-radius: 6px;
+    padding: 6px;
+
+
+}
+
+.memory{
+    margin: 6px;
+    padding: 6px;
+    border-radius: 6px;
+}
+
 /*LOWER AREA*/
 
 .lower-keys{
+
     display: flex;
-    margin: 12px;
 
 }
 
@@ -121,6 +144,7 @@ button{
 }
 
 .right-keys{
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -128,8 +152,22 @@ button{
 
 }
 
-.numberKeys{
-    padding: 12px;
+.operationKeys{
+    padding: 6px;
     border-radius: 8px;
-    margin: 6px;
+    margin: 4px;
+
+    height:45px ;
+    width: 40px;
+
+    text-align: center;
+}
+
+.numberKeys{
+    
+    height:50px ;
+    width: 35px;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 6px ;
 }
