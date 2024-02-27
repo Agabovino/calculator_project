@@ -18,7 +18,7 @@ button{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #813238 ;
+    background-color: #6f2860;
 
     width: 320px;
     height: 500px;
@@ -28,7 +28,7 @@ button{
     border-radius: 6px;
 
 
-    box-shadow: 0 0px 0px 12px #792f35;
+    box-shadow: 0 0px 0px 12px #66275f;
 }
 
 /*UPPER SECTION*/
