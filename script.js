@@ -3,6 +3,7 @@ let displayContent = document.querySelector(".inner-display-content");
 let powerBtn = document.querySelector(".power");
 let addBtn = document.querySelector(".add");
 let clearAndOnBtn = document.querySelector(".cleaner-and-powerOn");
+let equalBtn = document.querySelector(".equal");
 
 let memoryKeys = document.getElementsByClassName("memory");
 memoryKeys = Array.from(memoryKeys);
@@ -13,27 +14,36 @@ opKeys = Array.from(opKeys);
 let numberKeyArray = document.getElementsByClassName("numberKeys");
 numberKeyArray = Array.from(numberKeyArray);
 
+let functionType;
 let isOn = false;
+let isItCalculating = false;
 let insertedMemoryValue = 0;
 let memoryValue;
 
 
-
 /*----------CALCULATOR BASIC FUNCTIONS----------*/
 
-function add(){
-
+function add(num1, num2){
+    return num1 + num2;
 }
 
-function subtract(){
-
+function subtract(num1, num2){
+    return num1 - num2;
 }
 
-function multiply(){
-
+function multiply(num1, num2){
+    return num1*num2;
 }
 
-function divide(){
+function divide(num1, num2){
+    return (num1 / num2);
+}
+
+function extract(num1){
+    return num1 * (1/2);
+}
+
+function getMarkUp(){
 
 }
 
@@ -88,7 +98,61 @@ memoryKeys.map((currentBtn)=>{
 })
 
 opKeys.map((currentBtn)=>{
+   
+    currentBtn.addEventListener("click", ()=>{
 
+    if(currentBtn.textContent == '√'){
+        functionType = currentBtn.textContent;
+        memoryValue = Number(displayContent.textContent);
+
+    }else{
+        functionType = currentBtn.textContent;
+        memoryValue = Number(displayContent.textContent);
+        displayContent.textContent = "0";
+    }
+
+    });
+
+});
+
+equalBtn.addEventListener("click", ()=>{
+
+    let numberedDisplayValue = Number(displayContent.textContent);
+       
+    switch(functionType){
+         
+        case '√':
+            console.log(memoryValue);
+            displayContent.textContent = extract(memoryValue);
+            break; 
+
+        case 'MU':
+            getMarkUp();
+            break;
+            
+        case '÷':
+            displayContent.textContent = divide(memoryValue, numberedDisplayValue);
+            break;
+            
+        case '%':
+            
+            break;
+
+        case 'X':
+
+            displayContent.textContent = multiply(memoryValue, numberedDisplayValue);
+            break;  
+            
+         case '-':
+            displayContent.textContent = subtract(memoryValue, numberedDisplayValue);
+            break;
+
+        case '+':
+            
+            displayContent.textContent = add(memoryValue, numberedDisplayValue);
+            
+            break;    
+    }
 });
 
 numberKeyArray.map((currentBtn)=>{

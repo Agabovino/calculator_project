@@ -178,6 +178,15 @@ button{
 
 .equal{
     background-color: #611e5f;
+
+    padding: 6px;
+    border-radius: 8px;
+    margin: 4px;
+
+    height:45px ;
+    width: 40px;
+
+    text-align: center;
 }
 
 .numberKeys{
