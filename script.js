@@ -88,7 +88,7 @@ clearAndOnBtn.addEventListener("click", ()=>{
 memoryKeys.map((currentBtn)=>{
     currentBtn.addEventListener('click', ()=>{
 
-        switch(currentBtn.textContent){
+      if(isOn){ switch(currentBtn.textContent){
             case 'M+':
                 insertedMemoryValue = Number(displayContent.textContent);
                 console.log(insertedMemoryValue); 
@@ -107,7 +107,7 @@ memoryKeys.map((currentBtn)=>{
                 insertedMemoryValue = 0;
                 console.log(insertedMemoryValue);
                 break;  
-        }
+        }}
     });
 })
 
@@ -115,15 +115,16 @@ opKeys.map((currentBtn)=>{
    
     currentBtn.addEventListener("click", ()=>{
 
-    if(currentBtn.textContent == '√'){
+    if(isOn){
+        if(currentBtn.textContent == '√'){
         functionType = currentBtn.textContent;
         memoryValue = Number(displayContent.textContent);
 
-    }else{
-        functionType = currentBtn.textContent;
-        memoryValue = Number(displayContent.textContent);
-        displayContent.textContent = "0";
-    }
+        }else{
+            functionType = currentBtn.textContent;
+            memoryValue = Number(displayContent.textContent);
+            displayContent.textContent = "0";
+    }}
 
     });
 
