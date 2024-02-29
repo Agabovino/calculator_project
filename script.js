@@ -2,8 +2,12 @@ let displayContent = document.querySelector(".inner-display-content");
 
 let powerBtn = document.querySelector(".power");
 let addBtn = document.querySelector(".add");
-let memoryKeys = document.getElementsByClassName('memory');
+
+let memoryKeys = document.getElementsByClassName("memory");
 memoryKeys = Array.from(memoryKeys);
+
+let opKeys = document.getElementsByClassName("operationKeys");
+opKeys = Array.from(opKeys);
 
 let numberKeyArray = document.getElementsByClassName("numberKeys");
 numberKeyArray = Array.from(numberKeyArray);
@@ -72,13 +76,22 @@ memoryKeys.map((currentBtn)=>{
     });
 })
 
-/*----------NUMBERS BTNS EVENT LISTENERS----------*/
+opKeys.map((currentBtn)=>{
+
+});
 
 numberKeyArray.map((currentBtn)=>{
    
         currentBtn.addEventListener("click", ()=> {
             if(isOn){
-                displayContent.textContent += currentBtn.textContent;
+                
+                if(displayContent.textContent == '0'){
+                    displayContent.textContent = '';
+                    displayContent.textContent += currentBtn.textContent;
+
+                }else{
+                    displayContent.textContent += currentBtn.textContent;
+                }       
             }
         });
 });

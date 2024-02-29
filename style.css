@@ -176,6 +176,10 @@ button{
     text-align: center;
 }
 
+.equal{
+    background-color: #611e5f;
+}
+
 .numberKeys{
     
     height:50px ;
