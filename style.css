@@ -20,8 +20,8 @@ button{
     flex-wrap: wrap;
     background-color: #6f2860;
 
-    width: 330px;
-    height: 530px;
+    width: 320px;
+    height: 500px;
 
     margin: 24px;
 
@@ -54,7 +54,7 @@ button{
     margin: 12px;
     padding: 12px;
     width: 80%;
-    height: 70px;
+    height: 50px;
     box-shadow: inset 1px -1px 12px 6px lightgray;
 }
 
@@ -64,13 +64,15 @@ button{
     align-items: center;
     justify-content: right;
     width: 237px;
-    height: 70px;
+    height: 50px;
    
     background-color: #a6b1b5;
 
     font-size: 32px;
     font-weight: bold;
     color: #473e3e;
+
+    overflow: hidden;
 
 }
 
