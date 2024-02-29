@@ -58,7 +58,6 @@ function getPercentage(num1, num2){
     }else{
         return num1*(num2/100);
     }
-    
 }
 
 /*----------BTNS EVENT LISTENERS----------*/
@@ -71,8 +70,7 @@ powerBtn.addEventListener("click", ()=>{
     }else{
         displayContent.textContent = "0";
         isOn = true;
-    }
-    
+    }  
 });
 
 clearAndOnBtn.addEventListener("click", ()=>{
@@ -143,14 +141,13 @@ equalBtn.addEventListener("click", ()=>{
 
         case 'MU':
             getMarkUp();
-            break;
-            
+            break; 
+
         case '÷':
             displayContent.textContent = divide(memoryValue, numberedDisplayValue);
             break;
             
         case '%':
-
             displayContent.textContent = getPercentage(memoryValue, numberedDisplayValue);
             break;
 
@@ -165,8 +162,7 @@ equalBtn.addEventListener("click", ()=>{
 
         case '+':
             
-            displayContent.textContent = add(memoryValue, numberedDisplayValue);
-            
+            displayContent.textContent = add(memoryValue, numberedDisplayValue);   
             break;    
     }
 });
@@ -174,9 +170,11 @@ equalBtn.addEventListener("click", ()=>{
 numberKeyArray.map((currentBtn)=>{
    
         currentBtn.addEventListener("click", ()=> {
+
             if(isOn){
                 
                 if(displayContent.textContent == '0'){
+
                     displayContent.textContent = '';
                     displayContent.textContent += currentBtn.textContent;
 
