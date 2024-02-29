@@ -2,6 +2,7 @@ let displayContent = document.querySelector(".inner-display-content");
 
 let powerBtn = document.querySelector(".power");
 let addBtn = document.querySelector(".add");
+let clearAndOnBtn = document.querySelector(".cleaner-and-powerOn");
 
 let memoryKeys = document.getElementsByClassName("memory");
 memoryKeys = Array.from(memoryKeys);
@@ -18,7 +19,7 @@ let memoryValue;
 
 
 
-/*----------FUNCTIONS----------*/
+/*----------CALCULATOR BASIC FUNCTIONS----------*/
 
 function add(){
 
@@ -36,7 +37,7 @@ function divide(){
 
 }
 
-/*----------EVENT LISTENERS----------*/
+/*----------BTNS EVENT LISTENERS----------*/
 
 powerBtn.addEventListener("click", ()=>{
 
@@ -48,6 +49,16 @@ powerBtn.addEventListener("click", ()=>{
         isOn = true;
     }
     
+});
+
+clearAndOnBtn.addEventListener("click", ()=>{
+  
+    if(isOn){
+        displayContent.textContent = "0";
+    }else{
+        displayContent.textContent = "0";
+        isOn = true;
+    }
 });
 
 memoryKeys.map((currentBtn)=>{
