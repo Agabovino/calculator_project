@@ -2,15 +2,14 @@ let displayContent = document.querySelector(".inner-display-content");
 
 let powerBtn = document.querySelector(".power");
 let addBtn = document.querySelector(".add");
+let memoryKeys = document.getElementsByClassName('memory');
+memoryKeys = Array.from(memoryKeys);
 
 let numberKeyArray = document.getElementsByClassName("numberKeys");
 numberKeyArray = Array.from(numberKeyArray);
 
-
-let oneBtn = document.querySelector(".one");
-console.log(oneBtn.textContent);
-
 let isOn = false;
+let insertedMemoryValue = 0;
 let memoryValue;
 
 
@@ -47,9 +46,31 @@ powerBtn.addEventListener("click", ()=>{
     
 });
 
-addBtn.addEventListener("click", ()=>{
+memoryKeys.map((currentBtn)=>{
+    currentBtn.addEventListener('click', ()=>{
 
-});
+        switch(currentBtn.textContent){
+            case 'M+':
+                insertedMemoryValue = Number(displayContent.textContent);
+                console.log(insertedMemoryValue); 
+                break; 
+
+            case 'M-':
+                insertedMemoryValue -= Number(displayContent.textContent);
+                console.log(insertedMemoryValue);
+                break;
+                
+            case 'MR':
+                displayContent.textContent = insertedMemoryValue;
+                break;
+                
+            case 'MC':
+                insertedMemoryValue = 0;
+                console.log(insertedMemoryValue);
+                break;  
+        }
+    });
+})
 
 /*----------NUMBERS BTNS EVENT LISTENERS----------*/
 
