@@ -47,6 +47,20 @@ function getMarkUp(){
 
 }
 
+function getPercentage(num1, num2){
+
+    if(num1 == 0 || num2 == 0){
+        if(num1 == 0){
+            return num2/100;
+        }else{
+            return num1/100;
+        }
+    }else{
+        return num1*(num2/100);
+    }
+    
+}
+
 /*----------BTNS EVENT LISTENERS----------*/
 
 powerBtn.addEventListener("click", ()=>{
@@ -135,7 +149,8 @@ equalBtn.addEventListener("click", ()=>{
             break;
             
         case '%':
-            
+
+            displayContent.textContent = getPercentage(memoryValue, numberedDisplayValue);
             break;
 
         case 'X':
